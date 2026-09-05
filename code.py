@@ -6,7 +6,6 @@ print("There is a locked door in front of you.")
 print("1. Go to the tower")
 print("2. Go to the door")
 choice = input("Choose 1 or 2: ")
-
 if choice == "1":
     room = "tower"
 
@@ -21,13 +20,15 @@ if room == "tower":
     print("a. 16")
     print("b. 11")
     print("c. 13")
+
     answer = input("Choose a, b or c: ")
 
     if answer == "b":
         print("Correct!")
         print("You found a key!")
         key = 1
-
+        print("Go back and try the door again.")
+        room = "door"
     else:
         print("Wrong answer!")
 
@@ -37,7 +38,7 @@ if room == "door":
         print("You use the key.")
         print("The door opens!")
         print("You escaped the castle!")
-
     else:
         print("The door is locked.")
         print("You need a key.")
+        print("Go back and try again.")
